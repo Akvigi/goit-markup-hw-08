@@ -1,0 +1,31 @@
+.about {
+  padding: 94px 0;
+  max-width: 1600px;
+}
+
+.about-container {
+}
+
+.about-list {
+  display: flex;
+  max-width: 1170px;
+}
+
+.whatwedo-list__item,
+.about-list__item {
+  padding-right: 30px;
+}
+
+.about-list__title {
+  @include font(14px, 700, 1.14, 0.03em);
+  color: #212121;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.about-list__text {
+  @include font(14px, 400, 1.71, 0.03em);
+  color: var(--gray-color);
+}

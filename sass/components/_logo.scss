@@ -1,0 +1,9 @@
+.logospecial {
+  color: var(--active-link-color);
+}
+
+.logo {
+  @include font(26px, 700, 1.17, 0.03em);
+  text-decoration: none;
+  font-family: 'raleway', sans-serif;
+}

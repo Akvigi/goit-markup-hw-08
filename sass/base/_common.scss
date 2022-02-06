@@ -1,0 +1,30 @@
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white-color);
+  margin: 0;
+  padding: 0;
+}
+
+.bluetext {
+  color: var(--active-link-color);
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+.list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
