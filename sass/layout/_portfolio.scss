@@ -87,9 +87,6 @@
 .portfolio_name_project {
   color: var(--black-color);
   @include font(18px, 700, 2, 0.06em);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: calc(36 / 18);
   padding-bottom: 0;
   margin-bottom: 0;
 }

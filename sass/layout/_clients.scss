@@ -1,6 +1,9 @@
 .clients {
-  padding: 94px 0;
+  padding: 60px 0;
   max-width: 1600px;
+  @media screen and (min-width: 1600px) {
+    padding: 94px 0;
+  }
 }
 
 .clients__title {
@@ -9,12 +12,14 @@
 .clients-list {
   margin: 50px 0 0 0;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .client-link {
   border: 1px solid var(--logo-color);
   border-radius: 4px;
-  padding: 16px 32px;
+  padding: 16px 52px;
   justify-content: center;
   @extend %flex-align;
   transform: border-color;
@@ -32,8 +37,21 @@
   fill: var(--logo-color);
   transform: fill;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 60px;
+  width: 106px;
+}
+.clients-list__item {
+  margin-bottom: 30px;
+  @media screen and (min-width: 1600px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
 }
 
-.clients-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .clients-list__item:not(:nth-child(even)) {
+    margin-right: 30px;
+  }
 }

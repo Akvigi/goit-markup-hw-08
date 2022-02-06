@@ -12,8 +12,9 @@
 }
 .modal {
   box-sizing: border-box;
-  width: 528px;
-  min-height: 581px;
+
+  width: 450px;
+  min-height: 609px;
   background-color: var(--white-color);
   border-radius: 4px;
   position: absolute;
@@ -22,6 +23,10 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 1000ms linear;
   padding: 40px;
+  @media screen and (min-width: 1600px) {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -61,7 +66,6 @@
 
 .form-conteiner-input {
   margin-bottom: 10px;
-  position: relative;
 }
 
 .modal-input {
@@ -114,7 +118,8 @@
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 0;
-  @include font(14px, 400, 1.71, 0.03em);
+  // @include font(14px, 400, 1.71, 0.03em);
+  @include font(12px, 400, 1.166, 0.03em);
   color: #757575;
   & span {
     width: 15px;
@@ -122,7 +127,7 @@
     border: 2px solid #000;
     border-radius: 2px;
     margin-right: 7px;
-    margin-left: 12px;
+    // margin-left: 12px;
     justify-content: center;
     @extend %flex-align;
   }
