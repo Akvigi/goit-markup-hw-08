@@ -13,13 +13,13 @@
     </head>
     <body class="portfolio_body">
         <header class="navsection flexrow">
-            <div class="container header__container flexrow">
+            <div class="header__container flexrow">
                 <a class="logo header__logo" href=""><span class="logospecial">Web</span>Studio</a>
                 <nav class="site-nav flexrow">
                     <ul class="list site-list">
-                        <li class="site-list__item"><a class="site-list__link link-all current" href="./index.html">Студия</a>
+                        <li class="site-list__item"><a class="site-list__link link-all" href="./index.html">Студия</a>
                         </li>
-                        <li class="site-list__item"><a class="site-list__link link-all" href="./portfolio.html">Портфолио</a>
+                        <li class="site-list__item"><a class="site-list__link link-all current" href="./portfolio.html">Портфолио</a>
                         </li>
                         <li class="site-list__item"><a class="site-list__link link-all" href="">Контакты</a></li>
                     </ul>
@@ -59,7 +59,7 @@
                 <ul class="examples-projext-list">
                     <li class="examples-projext-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/1p.jpg" alt="технокряк">
+                            <img src="./images/1p.jpg" alt="технокряк">
                             <div class="examples-overlay">
                                 <p class="text_onimg">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -162,7 +162,7 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="footer__left">
+            <div class="footer__div-1">
                 <a class="footer-logo logo" href="">
                     <span class="logospecial">Web</span>Studio
                 </a>
@@ -176,7 +176,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__right">
+            <div class="footer__div-2">
                 <h3 class="footer-title">Присоединяйтесь</h3>
                 <ul class="footer-social-links">
                     <li class="footer-social-links__item">
@@ -209,6 +209,16 @@
                     </li>
                 </ul>
             </div>
-        </footer>
+            <div class="footer-section-input">
+                <h3 class="footer-title">Подпишитесь на рассылку</h3>
+                <input class="footer-input" type="email" name="mail-footer" placeholder="E-mail">
+                <button class="btn footer-input-button" type="button">
+                    Подписаться
+                    <svg class="footer-input-button__icon">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
+            </div>
+            </footer>
     </body>
 </html>

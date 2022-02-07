@@ -4,19 +4,53 @@
 }
 
 .header__container {
-  @extend %flex-align;
+  @media screen and (min-width: 768px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
   padding: 16px 0 16px 15px;
   color: #000;
+  @media screen and (min-width: 768px) {
+    padding: 26px 88px 26px 0;
+  }
   @media screen and (min-width: 1600px) {
     padding: 24px 93px 25px 0;
   }
 }
+
+.site-nav {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+
 .site-list {
   list-style: none;
   display: flex;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 
 .site-list__item {
@@ -59,13 +93,42 @@
 .site-list-adress {
   list-style: none;
   display: flex;
-  padding-left: 331px;
+  @media screen and (min-width: 768px) {
+    padding-left: 84px;
+    flex-direction: column;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1600px) {
+    padding-left: 331px;
+    flex-direction: row;
+    padding: 0 0 0 331px;
+  }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 
 .site-list-adress__item {
-  padding: 32px 0;
-  &:first-child {
-    margin-right: 50px;
+  @media screen and (max-width: 1599px) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    padding: 32px 0;
+    &:first-child {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -80,6 +143,12 @@
     .site-list-adress__icon {
       fill: var(--active-link-color);
     }
+  }
+  @media screen and (min-width: 768px) {
+    @include font(12px, 500, 1.166, 0.02em);
+  }
+  @media screen and (min-width: 1600px) {
+    @include font(14px, 500, 1.142, 0.02em);
   }
 }
 
