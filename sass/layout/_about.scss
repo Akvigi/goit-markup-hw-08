@@ -6,7 +6,7 @@
 }
 
 .about__container {
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 738px;
     margin: 0 auto;
     padding: 0 15px;
@@ -15,11 +15,11 @@
 
 .about-list {
   max-width: 1170px;
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
   }
 }
@@ -27,7 +27,7 @@
 .about-list__item {
   margin-bottom: 30px;
   justify-content: center;
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     padding-right: 30px;
   }
   @media screen and (min-width: 768px) {

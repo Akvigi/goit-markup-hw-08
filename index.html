@@ -17,7 +17,48 @@
             <header class="navsection flexrow">
                 <div class="header__container flexrow">
                     <a class="logo header__logo" href=""><span class="logospecial">Web</span>Studio</a>
-                    
+                    <button class="menu-open " data-menu-open>
+                        <svg class="menu-open__icon">
+                            <use href="./images/icons.svg#icon-menu"></use>
+                        </svg>
+                    </button>
+                    <div class="header__menu is-hidden" data-menu>
+                        <div class="menu__container">
+                                <button type="button" class="close menu-close" data-menu-close>
+                                    <svg class="button-close">
+                                        <use href="./images/icons.svg#icon-close-black-18dp-2-1">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <div class="menu-top">
+                                <ul class="list menu-navigation-list">
+                                    <li class="menu-navigation-list__item"><a class="link-all current" href="./index.html">Студия</a></li>
+                                    <li class="menu-navigation-list__item"><a class="link-all menu-navigation__link" href="./portfolio.html">Портфолио</a></li>
+                                    <li class="menu-navigation-list__item"><a class="link-all menu-navigation__link" href="">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-bottom">
+                                <ul class="list menu-adress">
+                                    <li class="menu-adress__item">
+                                        <a class="link-all menu-adress__tel" href="tel:+380961111111">
+                                            +380961111111
+                                        </a>
+                                    </li>
+                                    <li class="menu-adress__item">
+                                        <a class="link-all menu-adress__mail" href="mailto:info@devstudio.com">
+                                            info@devstudio.com
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="header-menu__social-list">
+                                    <li class="menu-social-list__item"><a class="menu-social__link" href="">Instagam</a></li>
+                                    <li class="menu-social-list__item"><a class="menu-social__link" href="">Twitter</a></li>
+                                    <li class="menu-social-list__item"><a class="menu-social__link" href="">Facebook</a></li>
+                                    <li class="menu-social-list__item"><a class="menu-social__link" href="">Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <nav class="site-nav flexrow">
                         <ul class="list site-list" >
                             <li class="site-list__item"><a class="site-list__link link-all current"  href="./index.html">Студия</a></li>
@@ -96,19 +137,28 @@
                     </h2>
                     <ul class="list whatwedo-list" >
                         <li class="whatwedo-list__item">
-                            <img src="./images/f1.jpg" alt="coding" Width="370" height="294">
+                            <picture>
+                                <source srcset="./images/f1@2x.jpg 2x" type="image/jpeg">
+                                <img src="./images/f1.jpg 1x" alt="coding" Width="370" height="294">
+                            </picture>
                             <div class="whatwedo-overlay">
                                 <p class="whatwedo-overlay__text">Десктопные приложения</p>
                             </div>
                         </li>
                         <li class="whatwedo-list__item">
-                            <img class="imgwhatwedo" src="./images/f2.jpg" alt="optimizing" Width="370" height="294">
+                            <picture>
+                                <source srcset="./images/f2@2x.jpg 2x" type="image/jpeg">
+                                <img src="./images/f2.jpg 1x" alt="optimizing" Width="370" height="294">
+                            </picture>
                             <div class="whatwedo-overlay">
                                 <p class="whatwedo-overlay__text">Мобильные приложения</p>
                             </div>
                         </li>
                         <li class="whatwedo-list__item">
-                            <img src="./images/f3.jpg" alt="disining" Width="370" height="294">
+                            <picture>
+                                <source srcset="./images/f3@2x.jpg 2x" type="image/jpeg">
+                                <img src="./images/f3.jpg 1x" alt="disining" Width="370" height="294">
+                            </picture>
                             <div class="whatwedo-overlay">
                                 <p class="whatwedo-overlay__text">Дизайнерские решения</p>
                             </div>
@@ -122,8 +172,11 @@
                     <ul class="list team-list" >
                         <li class="team-list__item">
                             <div class="team-list__imgbord">
-                               <img class="team-list__img" src="./images/d1.jpg" alt="Игорь Демьяненко" >
-                                <div class="team-list__border-team">
+                            <picture>
+                                <source srcset="./images/d1@2x.jpg 2x" type="image/jpeg">
+                                <img class="team-list__img 1x" src="./images/d1.jpg" alt="Игорь Демьяненко" >
+                            </picture>
+                             <div class="team-list__border-team">
                                     <h3 class="team-list__team-member">Игорь Демьяненко</h3>
                                     <p class="team-list__duty" lang="en">Product Designer</p>
                                     <ul class="list team-list-links">
@@ -161,7 +214,10 @@
                         </li>
                         <li class="team-list__item">
                             <div class="team-list__imgbord">
-                               <img class="team-list__img" src="./images/d2.jpg" alt="Ольга Репина" >
+                                <picture>
+                                    <source srcset="./images/d2@2x.jpg 2x" type="image/jpeg">
+                                    <img class="team-list__img 1x" src="./images/d2.jpg" alt="Ольга Репина">
+                                </picture>
                                 <div class="team-list__border-team">
                                     <h3 class="team-list__team-member">Ольга Репина</h3>
                                     <p class=team-list__duty lang="en">Frontend Developer</p>
@@ -196,7 +252,10 @@
                         </li>
                         <li class="team-list__item">
                             <div class="team-list__imgbord">
-                                <img class="team-list__img" src="./images/d3.jpg" alt="Николай Тарасов" >
+                                <picture>
+                                    <source srcset="./images/d3@2x.jpg 2x" type="image/jpeg">
+                                    <img class="team-list__img 1x" src="./images/d3.jpg" alt="Николай Тарасов" >
+                                </picture>
                                 <div class="team-list__border-team">
                                     <h3 class="team-list__team-member">Николай Тарасов</h3>
                                     <p class=team-list__duty lang="en">Marketing</p>
@@ -235,7 +294,10 @@
                         </li>
                         <li class="team-list__item">
                             <div class="team-list__imgbord">
-                               <img class="team-list__img" src="./images/d4.jpg" alt="Михаил Ермаков" >
+                                <picture>
+                                    <source srcset="./images/d4@2x.jpg 2x" type="image/jpeg">
+                                    <img class="team-list__img 1x" src="./images/d4.jpg" alt="Михаил Ермаков" >
+                                </picture>
                                 <div class="team-list__border-team">
                                     <h3 class="team-list__team-member">Михаил Ермаков</h3>
                                     <p class=team-list__duty>UI Designer</p>
@@ -326,75 +388,77 @@
             </section>
         </main>
         <footer class="footer">
-            <ul class="footer-list-sections">
-                <li class="footer-list-section__one">
-                    <a class="footer-logo logo"  href="">
-                        <span class="logospecial">Web</span>Studio
-                    </a>
-                    <address class="footer-address">
-                        <a class="footer-adress" href="">г. Киев, пр-т Леси Украинки, 26</a>
-                    </address>
-                    <ul class="list footer-list-contact" >
-                        <li class="footer-list-contact__item"><a class="footer-contact"  href="mailto:info@example.com">info@example.com</a></li>
-                        <li class="footer-list-contact__item"><a class="footer-contact"  href="tel:+380991111111">+380991111111</a></li>
-                    </ul>
-                </li>
-                <li class="footer-list-section__two">
-                    <h3 class="footer-title">Присоединяйтесь</h3>
-                    <ul class="footer-social-links">
-                        <li class="footer-social-links__item">
-                            <a href="" class="footer-social__link">
-                                <svg class="team-social__icon">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social-links__item">
-                            <a href="" class="footer-social__link">
-                                <svg class="team-social__icon">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social-links__item">
-                            <a href="" class="footer-social__link">
-                                <svg class="team-social__icon">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social-links__item">
-                            <a href="" class="footer-social__link">
-                                <svg class="team-social__icon">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="footer-section-input">
-                <h3 class="footer-title">Подпишитесь на рассылку</h3>
-                <div class="footer-input-and-button">   
-                    <input 
-                        class="footer-input" 
-                        type="email" 
-                        name="mail-footer"
-                        placeholder="E-mail">
-                    <button class="btn footer-input-button" type="button">
-                        Подписаться
-                        <svg class="footer-input-button__icon">
-                            <use href="./images/icons.svg#icon-send"></use>
-                        </svg>
-                    </button>
+            <div class="container footer__container">
+                <ul class="footer-list-sections">
+                    <li class="footer-list-section__one">
+                        <a class="footer-logo logo"  href="">
+                            <span class="logospecial">Web</span>Studio
+                        </a>
+                        <address class="footer-address">
+                            <a class="footer-adress" href="">г. Киев, пр-т Леси Украинки, 26</a>
+                        </address>
+                        <ul class="list footer-list-contact" >
+                            <li class="footer-list-contact__item"><a class="footer-contact"  href="mailto:info@example.com">info@example.com</a></li>
+                            <li class="footer-list-contact__item"><a class="footer-contact"  href="tel:+380991111111">+380991111111</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-list-section__two">
+                        <h3 class="footer-title">Присоединяйтесь</h3>
+                        <ul class="footer-social-links">
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="footer-section-input">
+                    <h3 class="footer-title">Подпишитесь на рассылку</h3>
+                    <div class="footer-input-and-button">   
+                        <input 
+                            class="footer-input" 
+                            type="email" 
+                            name="mail-footer"
+                            placeholder="E-mail">
+                        <button class="btn footer-input-button" type="button">
+                            Подписаться
+                            <svg class="footer-input-button__icon">
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </footer>
         
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" class="modal-close" data-modal-close>
-                    <svg class="buttonclosemodal">
+                <button type="button" class="close" data-modal-close>
+                    <svg class="button-close modal-close">
                         <use  href="./images/icons.svg#icon-close-black-18dp-2-1">
                         </use>
                     </svg>
@@ -463,5 +527,6 @@
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>

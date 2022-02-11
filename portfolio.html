@@ -15,9 +15,54 @@
         <header class="navsection flexrow">
             <div class="header__container flexrow">
                 <a class="logo header__logo" href=""><span class="logospecial">Web</span>Studio</a>
+                <button class="menu-open " data-menu-open>
+                    <svg class="menu-open__icon">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="header__menu is-hidden" data-menu>
+                    <div class="menu__container">
+                        <button type="button" class="close menu-close" data-menu-close>
+                            <svg class="button-close">
+                                <use href="./images/icons.svg#icon-close-black-18dp-2-1">
+                                </use>
+                            </svg>
+                        </button>
+                        <div class="menu-top">
+                            <ul class="list menu-navigation-list">
+                                <li class="menu-navigation-list__item"><a class="link-all menu-navigation__link"
+                                        href="./index.html">Студия</a></li>
+                                <li class="menu-navigation-list__item"><a class="link-all current"
+                                        href="./portfolio.html">Портфолио</a></li>
+                                <li class="menu-navigation-list__item"><a class="link-all menu-navigation__link"
+                                        href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-bottom">
+                            <ul class="list menu-adress">
+                                <li class="menu-adress__item">
+                                    <a class="link-all menu-adress__tel" href="tel:+380961111111">
+                                        +380961111111
+                                    </a>
+                                </li>
+                                <li class="menu-adress__item">
+                                    <a class="link-all menu-adress__mail" href="mailto:info@devstudio.com">
+                                        info@devstudio.com
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header-menu__social-list">
+                                <li class="menu-social-list__item"><a class="menu-social__link" href="">Instagam</a></li>
+                                <li class="menu-social-list__item"><a class="menu-social__link" href="">Twitter</a></li>
+                                <li class="menu-social-list__item"><a class="menu-social__link" href="">Facebook</a></li>
+                                <li class="menu-social-list__item"><a class="menu-social__link" href="">Linkedin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <nav class="site-nav flexrow">
                     <ul class="list site-list">
-                        <li class="site-list__item"><a class="site-list__link link-all" href="./index.html">Студия</a>
+                        <li class="site-list__item"><a class="site-list__link link-all " href="./index.html">Студия</a>
                         </li>
                         <li class="site-list__item"><a class="site-list__link link-all current" href="./portfolio.html">Портфолио</a>
                         </li>
@@ -56,10 +101,15 @@
                 </ul>
             </div>
             <div class="container examples__container-projects">
-                <ul class="examples-projext-list">
-                    <li class="examples-projext-list__item">
+                <ul class="examples-project-list">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img src="./images/1p.jpg" alt="технокряк">
+                            <picture>
+                                <source srcset="./images/1p-short.jpg 1x, ./images/1p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/1p.jpg 1x, ./images/1p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/1p.jpg 1x" alt="технокряк">
+                            </picture>
                             <div class="examples-overlay">
                                 <p class="text_onimg">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -70,9 +120,14 @@
                             <p class = "portfolio_type_project">Веб-сайт</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/2p.jpg" alt="Постер">
+                            <picture>
+                                <source srcset="./images/2p-short.jpg 1x, ./images/2p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/2p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/2p.jpg 1x" alt="Постер">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -81,9 +136,14 @@
                             <p class = "portfolio_type_project">Дизайн</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/3p.jpg" alt="лого ресторана">
+                            <picture>
+                                <source srcset="./images/3p-short.jpg 1x, ./images/3p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/3p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/3p.jpg 1x" alt="Ресторан">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -92,9 +152,14 @@
                             <p class = "portfolio_type_project">Приложение</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/4p.jpg" alt="лого">
+                            <picture>
+                                <source srcset="./images/4p-short.jpg 1x, ./images/4p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/4p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/4p.jpg 1x" alt="Проект Prime">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -103,9 +168,14 @@
                             <p class = "portfolio_type_project">Маркетинг</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/5p.jpg" alt="лого">
+                            <picture>
+                                <source srcset="./images/5p-short.jpg 1x, ./images/5p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/5p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/5p.jpg 1x" alt="Проект Boxes">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -114,9 +184,14 @@
                             <p class = "portfolio_type_project">Приложение</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/6p.jpg" alt="вид сайта">
+                            <picture>
+                                <source srcset="./images/6p-short.jpg 1x, ./images/6p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/6p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/6p.jpg 1x" alt="Inspiration has no Borders">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -125,9 +200,14 @@
                             <p class = "portfolio_type_project">Веб-сайт</p>
                         </div>
                         </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/7p.jpg" alt="открытые страницы книги">
+                            <picture>
+                                <source srcset="./images/7p-short.jpg 1x,./images/7p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/7p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/7p.jpg 1x" alt="Издание Limited Edition">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -136,9 +216,14 @@
                             <p class = "portfolio_type_project">Дизайн</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/8p.jpg" alt="бирка проекта">
+                            <picture>
+                                <source srcset="./images/8p-short.jpg 1x, ./images/8p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/8p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/8p.jpg 1x" alt="Проект LAB">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -147,9 +232,14 @@
                             <p class = "portfolio_type_project">Маркетинг</p>
                         </div>
                     </li>
-                    <li class="examples-projext-list__item">
+                    <li class="examples-project-list__item">
                         <div class="examples-frame-img">
-                            <img width = 370px height = 294px  src="./images/9p.jpg" alt="главная страинца">
+                            <picture>
+                                <source srcset="./images/9p-short.jpg 1x, ./images/9p-short@2x.jpg 2x" media="(max-width:767px)">
+                                <source srcset="./images/9p@2x.jpg 2x" type="image/jpeg">
+
+                                <img src="./images/9p.jpg 1x" alt="Growing Business">
+                            </picture>
                             <div class="examples-overlay">
                             </div>
                         </div>
@@ -162,63 +252,70 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="footer__div-1">
-                <a class="footer-logo logo" href="">
-                    <span class="logospecial">Web</span>Studio
-                </a>
-                <address class="footer-address">
-                    <a class="footer-adress" href="">г. Киев, пр-т Леси Украинки, 26</a>
-                </address>
-                <ul class="list footer-list-contact">
-                    <li class="footer-list-contact__item"><a class="footer-contact"
-                            href="mailto:info@example.com">info@example.com</a></li>
-                    <li class="footer-list-contact__item"><a class="footer-contact" href="tel:+380991111111">+380991111111</a>
+            <div class="container footer__container">
+                <ul class="footer-list-sections">
+                    <li class="footer-list-section__one">
+                        <a class="footer-logo logo" href="">
+                            <span class="logospecial">Web</span>Studio
+                        </a>
+                        <address class="footer-address">
+                            <a class="footer-adress" href="">г. Киев, пр-т Леси Украинки, 26</a>
+                        </address>
+                        <ul class="list footer-list-contact">
+                            <li class="footer-list-contact__item"><a class="footer-contact"
+                                    href="mailto:info@example.com">info@example.com</a></li>
+                            <li class="footer-list-contact__item"><a class="footer-contact"
+                                    href="tel:+380991111111">+380991111111</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-list-section__two">
+                        <h3 class="footer-title">Присоединяйтесь</h3>
+                        <ul class="footer-social-links">
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social-links__item">
+                                <a href="" class="footer-social__link">
+                                    <svg class="team-social__icon">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
+                <div class="footer-section-input">
+                    <h3 class="footer-title">Подпишитесь на рассылку</h3>
+                    <div class="footer-input-and-button">
+                        <input class="footer-input" type="email" name="mail-footer" placeholder="E-mail">
+                        <button class="btn footer-input-button" type="button">
+                            Подписаться
+                            <svg class="footer-input-button__icon">
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="footer__div-2">
-                <h3 class="footer-title">Присоединяйтесь</h3>
-                <ul class="footer-social-links">
-                    <li class="footer-social-links__item">
-                        <a href="" class="footer-social__link">
-                            <svg class="team-social__icon">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social-links__item">
-                        <a href="" class="footer-social__link">
-                            <svg class="team-social__icon">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social-links__item">
-                        <a href="" class="footer-social__link">
-                            <svg class="team-social__icon">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social-links__item">
-                        <a href="" class="footer-social__link">
-                            <svg class="team-social__icon">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-section-input">
-                <h3 class="footer-title">Подпишитесь на рассылку</h3>
-                <input class="footer-input" type="email" name="mail-footer" placeholder="E-mail">
-                <button class="btn footer-input-button" type="button">
-                    Подписаться
-                    <svg class="footer-input-button__icon">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
-                </button>
-            </div>
-            </footer>
+        </footer>
+        <script src="./js/menu.js"></script>
     </body>
 </html>

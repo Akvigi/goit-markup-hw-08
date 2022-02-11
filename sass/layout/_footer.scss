@@ -1,36 +1,41 @@
 .footer {
   background-color: #2f303a;
-  flex-direction: column;
   padding: 60px 0;
-  max-width: 1600px;
+}
+
+.footer__container {
   display: flex;
-  @media screen and (min-width: 768px) {
+  @include tel {
+    flex-direction: column;
   }
-  @media screen and (min-width: 1600px) {
+  @include desk {
     flex-direction: row;
   }
 }
 
 .footer-list-sections {
   display: flex;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @include notdesk {
     flex-direction: column;
   }
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @include onlytab {
     flex-direction: row;
     margin: 0 auto;
+  }
+  @include desk {
+    width: 50%;
   }
 }
 
 .footer-list-section__one {
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @include onlytab {
     margin-right: 165px;
   }
-  @media screen and (min-width: 1600px) {
-    margin-left: 215px;
+  @include desk {
     margin-right: 70px;
+    width: 50%;
   }
-  @media screen and (max-width: 1599px) {
+  @include notdesk {
     text-align: center;
   }
 }
@@ -66,14 +71,15 @@
 }
 
 .footer-list-section__two {
-  @media screen and (max-width: 1599px) {
+  @include notdesk {
     text-align: center;
   }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @include onlytel {
     margin-top: 60px;
   }
-  @media screen and (min-width: 1600px) {
+  @include desk {
     margin-right: 93px;
+    width: 50%;
   }
 }
 
@@ -125,20 +131,25 @@
 }
 
 .footer-section-input {
-  @media screen and (max-width: 1599px) {
+  @include notdesk {
     margin-top: 60px;
     text-align: center;
   }
-  @media screen and (max-width: 767px) {
-    padding: 0 15px;
+  @include desk {
+    width: 50%;
   }
 }
 
 .footer-input-and-button {
-  @media screen and (min-width: 1600px) {
+  @include desk {
     display: flex;
     flex-direction: row;
     padding-top: 20px;
+  }
+  @include notdesk {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -161,15 +172,15 @@
     @include font(16px, 400, 1.25, 0.03em);
     color: #ffffff99;
   }
-  @media screen and (max-width: 1599px) {
+  @include notdesk {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  @media screen and (min-width: 768px) {
+  @include tab {
     max-width: 450px;
   }
-  @media screen and (min-width: 1600px) {
-    max-width: 358px;
+  @include desk {
+    max-width: 388px;
     margin-right: 12px;
   }
 }
@@ -180,7 +191,10 @@
   box-shadow: 0px 4px 4px 0px #00000026;
   border-radius: 4px;
   display: flex;
-  flex-direction: row;
+  @include desk {
+    flex-direction: row;
+    margin: 0;
+  }
 }
 
 .footer-input-button__icon {

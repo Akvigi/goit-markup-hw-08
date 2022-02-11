@@ -8,7 +8,7 @@
 .whatwedo {
   max-width: 1600px;
   padding-bottom: 94px;
-  @media screen and (max-width: 1599px) {
+  @include notdesk {
     position: absolute;
     white-space: nowrap;
     width: 1px;

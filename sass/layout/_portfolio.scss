@@ -5,30 +5,48 @@
 .examples {
   max-width: 1600px;
   padding: 60px 0;
-  @media screen and (min-width: 1600px) {
+  @include desk {
     padding: 94px 0;
   }
   border-top: 1px solid #ececec;
 }
 
-.examples__container {
+.examples__container-projects {
+  @include desk {
+    padding: 0;
+  }
+  @include onlytel {
+    max-width: 450px;
+  }
+  @include onlytab {
+    max-width: 758px;
+  }
+}
+
+.examples__container-button {
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 612px;
 }
 
 .examples-list-button {
   list-style: none;
-  margin-bottom: 40px;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  @media screen and (min-width: 768x) {
-    margin-bottom: 34px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 50px;
   }
 }
 
 .examples-list-button__item {
-  margin-right: 8px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
   &:not(:nth-child(n + 4)) {
     margin-bottom: 12px;
   }
@@ -51,13 +69,14 @@
   }
 }
 
-.examples-projext-list {
+.examples-project-list {
   list-style: none;
-  max-width: 1170px;
-  @media screen and (min-width: 768px) {
-    justify-content: space-between;
+  @include tab {
     flex-wrap: wrap;
     display: flex;
+  }
+  @include desk {
+    justify-content: space-between;
   }
 }
 
@@ -70,7 +89,7 @@
 }
 
 .examples-overlay {
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   left: 0;
   top: 0;
@@ -81,8 +100,7 @@
   overflow: auto;
 }
 
-.examples-projext-list__item {
-  margin-top: 30px;
+.examples-project-list__item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   &:focus,
@@ -90,6 +108,26 @@
     box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
     .examples-overlay {
       transform: translateY(0%);
+    }
+  }
+  @include notdesk {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+  @include tel {
+    max-width: 450px;
+  }
+  @include desk {
+    &:nth-child(n + 4) {
+      margin-top: 30px;
+    }
+  }
+
+  @include onlytab {
+    max-width: 354px;
+    &:nth-child(odd) {
+      margin-right: 30px;
     }
   }
 }

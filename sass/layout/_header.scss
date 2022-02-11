@@ -4,25 +4,26 @@
 }
 
 .header__container {
-  @media screen and (min-width: 768px) {
+  @include tab {
     max-width: 1200px;
     margin: 0 auto;
   }
+  position: relative;
 }
 
 .header__logo {
   padding: 16px 0 16px 15px;
   color: #000;
-  @media screen and (min-width: 768px) {
+  @include tab {
     padding: 26px 88px 26px 0;
   }
-  @media screen and (min-width: 1600px) {
+  @include desk {
     padding: 24px 93px 25px 0;
   }
 }
 
 .site-nav {
-  @media screen and (max-width: 767px) {
+  @include onlytel {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -39,7 +40,7 @@
 .site-list {
   list-style: none;
   display: flex;
-  @media screen and (max-width: 767px) {
+  @include onlytel {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -78,33 +79,32 @@
 .current {
   color: var(--active-link-color);
   position: relative;
-  &::after {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background-color: var(--active-link-color);
-    left: 0;
-    bottom: -32px;
-    border-radius: 2px;
-    position: absolute;
+  @include tab {
+    &::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: var(--active-link-color);
+      left: 0;
+      bottom: -32px;
+      border-radius: 2px;
+      position: absolute;
+    }
   }
 }
 
 .site-list-adress {
   list-style: none;
   display: flex;
-  @media screen and (min-width: 768px) {
-    padding-left: 84px;
+  @include onlytab {
+    padding: 21px 0 21px 84px;
     flex-direction: column;
-    padding-top: 21px;
-    padding-bottom: 21px;
   }
-  @media screen and (min-width: 1600px) {
+  @include desk {
     padding-left: 331px;
     flex-direction: row;
-    padding: 0 0 0 331px;
   }
-  @media screen and (max-width: 767px) {
+  @include onlytel {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -119,12 +119,12 @@
 }
 
 .site-list-adress__item {
-  @media screen and (max-width: 1599px) {
+  @include notdesk {
     &:first-child {
       margin-bottom: 10px;
     }
   }
-  @media screen and (min-width: 1600px) {
+  @include desk {
     padding: 32px 0;
     &:first-child {
       margin-right: 50px;
@@ -135,7 +135,6 @@
 .site-list-adress__link {
   color: var(--gray-color);
   @include font(14px, 500, 1.142, 0.02em);
-  text-decoration: none;
   &:active,
   &:focus,
   &:hover {
@@ -144,10 +143,10 @@
       fill: var(--active-link-color);
     }
   }
-  @media screen and (min-width: 768px) {
+  @include tab {
     @include font(12px, 500, 1.166, 0.02em);
   }
-  @media screen and (min-width: 1600px) {
+  @include desk {
     @include font(14px, 500, 1.142, 0.02em);
   }
 }
@@ -162,4 +161,32 @@
 .adress-icon-smart {
   justify-content: center;
   align-items: center;
+}
+
+.menu-open {
+  top: 10px;
+  right: 15px;
+  position: fixed;
+  background-color: transparent;
+  @include tab {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  &:hover .menu-open__icon {
+    fill: var(--active-link-color);
+  }
+}
+
+.menu-open__icon {
+  fill: var(--black-color);
+  width: 40px;
+  height: 40px;
 }

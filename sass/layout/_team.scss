@@ -2,24 +2,24 @@
   background-color: #f5f4fa;
   max-width: 1600px;
   padding: 60px 0;
-  @media screen and (min-width: 1600px) {
+  @include desk {
     padding: 94px 0;
   }
 }
 
 .team__container {
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @include onlytab {
     max-width: 738px;
   }
 }
 
 .team-list {
   list-style: none;
-  @media screen and (min-width: 1600px) {
+  @include desk {
     margin: 0 auto;
     display: flex;
   }
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @include onlytab {
     display: flex;
     flex-wrap: wrap;
   }
@@ -28,10 +28,11 @@
 .team-list__item {
   text-align: center;
   margin-bottom: 30px;
-  @media screen and (min-width: 1600px) {
+
+  @include desk {
     padding-right: 30px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @include onlytab {
     max-width: 354px;
     &:nth-child(odd) {
       margin-right: 30px;
@@ -46,7 +47,7 @@
   border-radius: 0px 0px 4px 4px;
 }
 .team-list__img {
-  @media screen and (min-width: 1600px) {
+  @include desk {
     width: 270px;
     height: 260px;
   }
