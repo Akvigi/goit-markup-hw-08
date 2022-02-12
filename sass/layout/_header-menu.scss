@@ -75,6 +75,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 96px;
+  overflow-y: auto;
 }
 
 .menu-social-list__item:not(:last-child) {
