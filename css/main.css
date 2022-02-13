@@ -705,12 +705,15 @@ h2.b1 {
 .client-link {
   border: 1px solid var(--logo-color);
   border-radius: 4px;
-  padding: 16px 52px;
+  width: 210px;
+  height: 92px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transform: border-color;
           transform: border-color;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -723,9 +726,15 @@ h2.b1 {
   fill: var(--active-link-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .client-link {
+    width: 226px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .client-link {
-    padding: 16px 32px;
+    width: 170px;
   }
 }
 
@@ -741,7 +750,6 @@ h2.b1 {
 
 .clients-list__item {
   margin-bottom: 30px;
-  max-width: 210px;
 }
 
 @media screen and (min-width: 1200px) {
