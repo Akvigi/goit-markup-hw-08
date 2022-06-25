@@ -1,11 +1,11 @@
 .navsection {
   background-color: var(--white-color);
-  max-width: 1600px;
+  // max-width: 1600px;
 }
 
 .header__container {
+  max-width: 1200px;
   @include tab {
-    max-width: 1200px;
     margin: 0 auto;
   }
   position: relative;

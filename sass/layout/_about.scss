@@ -1,8 +1,9 @@
 .about {
   padding: 60px 0;
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
+  // max-width: 1600px; 
 }
 
 .about__container {
@@ -11,6 +12,7 @@
     margin: 0 auto;
     padding: 0 15px;
   }
+
 }
 
 .about-list {
@@ -28,9 +30,12 @@
   margin-bottom: 30px;
   justify-content: center;
   @media screen and (min-width: 1200px) {
-    padding-right: 30px;
+    // padding-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+      }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 354px;
     &:nth-child(odd) {
       margin-right: 30px;
